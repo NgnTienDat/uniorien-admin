@@ -1,0 +1,184 @@
+admin-dashboard/
+├── public/
+│   ├── favicon.ico
+│   └── assets/
+│       └── images/
+├── src/
+│   ├── api/                          # API configuration & endpoints
+│   │   ├── client.ts                 # Axios/Fetch client setup
+│   │   ├── endpoints.ts              # API endpoint constants
+│   │   └── services/                 # API service layers
+│   │       ├── auth.service.ts
+│   │       ├── user.service.ts
+│   │       ├── university.service.ts
+│   │       ├── comment.service.ts
+│   │       ├── news.service.ts
+│   │       ├── scraping.service.ts
+│   │       ├── major.service.ts
+│   │       └── majorGroup.service.ts
+│   │
+│   ├── assets/                       # Static assets
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── fonts/
+│   │
+│   ├── components/                   # Reusable components
+│   │   ├── common/                   # Generic components
+│   │   │   ├── Button/
+│   │   │   │   ├── Button.tsx
+│   │   │   │   ├── Button.module.css
+│   │   │   │   └── index.ts
+│   │   │   ├── Input/
+│   │   │   ├── Modal/
+│   │   │   ├── Table/
+│   │   │   ├── Card/
+│   │   │   ├── Pagination/
+│   │   │   ├── SearchBar/
+│   │   │   ├── Select/
+│   │   │   ├── Badge/
+│   │   │   ├── Avatar/
+│   │   │   ├── Dropdown/
+│   │   │   └── LoadingSpinner/
+│   │   │
+│   │   ├── layout/                   # Layout components
+│   │   │   ├── Sidebar/
+│   │   │   │   ├── Sidebar.tsx
+│   │   │   │   ├── SidebarItem.tsx
+│   │   │   │   └── Sidebar.module.css
+│   │   │   ├── Header/
+│   │   │   │   ├── Header.tsx
+│   │   │   │   ├── UserMenu.tsx
+│   │   │   │   └── Header.module.css
+│   │   │   ├── AdminLayout/
+│   │   │   │   └── AdminLayout.tsx
+│   │   │   └── Breadcrumb/
+│   │   │
+│   │   └── features/                 # Feature-specific components
+│   │       ├── users/
+│   │       │   ├── UserTable.tsx
+│   │       │   ├── UserForm.tsx
+│   │       │   ├── UserStatusBadge.tsx
+│   │       │   └── UserDetailModal.tsx
+│   │       ├── universities/
+│   │       │   ├── UniversityTable.tsx
+│   │       │   ├── UniversityForm.tsx
+│   │       │   ├── BenchmarkEditor.tsx
+│   │       │   └── UniversityDetailModal.tsx
+│   │       ├── comments/
+│   │       │   ├── CommentTable.tsx
+│   │       │   ├── CommentModeration.tsx
+│   │       │   └── CommentDetailModal.tsx
+│   │       ├── news/
+│   │       │   ├── NewsTable.tsx
+│   │       │   ├── NewsEditor.tsx
+│   │       │   └── NewsPreview.tsx
+│   │       ├── scraping/
+│   │       │   ├── ScrapingJobList.tsx
+│   │       │   ├── DataVerification.tsx
+│   │       │   ├── ScrapingStats.tsx
+│   │       │   └── DataPreview.tsx
+│   │       ├── majors/
+│   │       │   ├── MajorTable.tsx
+│   │       │   ├── MajorForm.tsx
+│   │       │   └── MajorGroupSelector.tsx
+│   │       └── majorGroups/
+│   │           ├── MajorGroupTable.tsx
+│   │           └── MajorGroupForm.tsx
+│   │
+│   ├── pages/                        # Page components (route-level)
+│   │   ├── Login/
+│   │   │   └── Login.tsx
+│   │   ├── Dashboard/
+│   │   │   └── Dashboard.tsx         # Admin dashboard home
+│   │   ├── Users/
+│   │   │   ├── UserList.tsx
+│   │   │   └── UserDetail.tsx
+│   │   ├── Universities/
+│   │   │   ├── UniversityList.tsx
+│   │   │   ├── UniversityDetail.tsx
+│   │   │   └── UniversityEdit.tsx
+│   │   ├── Comments/
+│   │   │   └── CommentList.tsx
+│   │   ├── News/
+│   │   │   ├── NewsList.tsx
+│   │   │   ├── NewsCreate.tsx
+│   │   │   └── NewsEdit.tsx
+│   │   ├── Scraping/
+│   │   │   ├── ScrapingDashboard.tsx
+│   │   │   ├── DataVerification.tsx
+│   │   │   └── DataFinalization.tsx
+│   │   ├── Majors/
+│   │   │   ├── MajorList.tsx
+│   │   │   └── MajorEdit.tsx
+│   │   ├── MajorGroups/
+│   │   │   ├── MajorGroupList.tsx
+│   │   │   └── MajorGroupEdit.tsx
+│   │   └── NotFound/
+│   │       └── NotFound.tsx
+│   │
+│   ├── hooks/                        # Custom React hooks
+│   │   ├── useAuth.ts
+│   │   ├── useUsers.ts
+│   │   ├── useUniversities.ts
+│   │   ├── useComments.ts
+│   │   ├── useNews.ts
+│   │   ├── useScraping.ts
+│   │   ├── useMajors.ts
+│   │   ├── useMajorGroups.ts
+│   │   ├── useDebounce.ts
+│   │   ├── useModal.ts
+│   │   ├── usePagination.ts
+│   │   └── useTable.ts
+│   │
+│   ├── contexts/                     # React Context providers
+│   │   ├── AuthContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   └── NotificationContext.tsx
+│   │
+│   ├── routes/                       # Routing configuration
+│   │   ├── index.tsx                 # Main router
+│   │   ├── ProtectedRoute.tsx        # Auth guard
+│   │   └── routes.config.ts          # Route constants
+│   │
+│   ├── store/                        # State management (if using Redux/Zustand)
+│   │   ├── slices/
+│   │   │   ├── authSlice.ts
+│   │   │   ├── userSlice.ts
+│   │   │   ├── universitySlice.ts
+│   │   │   └── ...
+│   │   └── store.ts
+│   │
+│   ├── types/                        # TypeScript types & interfaces
+│   │   ├── api.types.ts
+│   │   ├── user.types.ts
+│   │   ├── university.types.ts
+│   │   ├── comment.types.ts
+│   │   ├── news.types.ts
+│   │   ├── scraping.types.ts
+│   │   ├── major.types.ts
+│   │   └── common.types.ts
+│   │
+│   ├── utils/                        # Utility functions
+│   │   ├── formatters.ts             # Date, currency, etc.
+│   │   ├── validators.ts             # Form validation
+│   │   ├── helpers.ts                # General helpers
+│   │   ├── constants.ts              # App constants
+│   │   └── storage.ts                # LocalStorage helpers
+│   │
+│   ├── styles/                       # Global styles
+│   │   ├── globals.css
+│   │   ├── variables.css
+│   │   └── mixins.css
+│   │
+│   ├── App.tsx                       # Root component
+│   ├── main.tsx                      # Entry point
+│   └── vite-env.d.ts                 # Vite types
+│
+├── .env.example                      # Environment variables template
+├── .env.local                        # Local environment variables
+├── .gitignore
+├── package.json
+├── tsconfig.json                     # TypeScript config
+├── vite.config.ts                    # Vite config
+├── tailwind.config.js                # If using Tailwind
+└── README.md

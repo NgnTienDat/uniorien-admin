@@ -11,8 +11,8 @@ import {
     BookOpen,
     FolderTree,
 } from 'lucide-react';
-import { AdminSidebar } from '@/components/layout/Sidebar';
-import { AdminHeader } from '@/components/layout/Header';
+import { AdminSidebar } from '@/components/layout/AdminSidebar';
+import { AdminHeader } from '@/components/layout/AdminHeader';
 
 
 
@@ -49,7 +49,7 @@ export const AdminLayout = () => {
 
     const currentTitle = menuItems.find((item) => isActive(item.path))?.label || 'Admin Panel';
     return (
-        <div className="flex h-screen bg-slate-50 font-sans text-slate-900">
+        <div className="flex h-screen bg-slate-100 font-sans text-slate-900">
             <AdminSidebar
                 sidebarOpen={sidebarOpen}
                 setSidebarOpen={setSidebarOpen}
