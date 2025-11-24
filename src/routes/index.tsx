@@ -6,6 +6,7 @@ import NotFound from '@/pages/NotFound';
 import { Login } from '@/pages/login/Login';
 import { AdminLayout } from '@/components/layout/AdminLayout';
 import { Dashboard } from '@/pages/dashboard/Dashboard';
+import { UserList } from '@/pages/users/UserList';
 
 
 export const router = createBrowserRouter([
@@ -29,13 +30,13 @@ export const router = createBrowserRouter([
                 path: 'dashboard',
                 element: <Dashboard />,
             },
-            // {
-            //     path: 'users',
-            //     children: [
-            //         { index: true, element: <UserList /> },
-            //         { path: ':id', element: <UserDetail /> },
-            //     ],
-            // },
+            {
+                path: 'users',
+                children: [
+                    { index: true, element: <UserList /> },
+                    // { path: ':id', element: <UserDetail /> },
+                ],
+            },
             // {
             //     path: 'universities',
             //     children: [

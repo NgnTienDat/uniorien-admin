@@ -11,11 +11,11 @@ export const API_ENDPOINTS = {
 
     // Users
     USERS: {
-        LIST: '/api/v1/admin/users',
-        DETAIL: (id: string) => `/api/v1/admin/users/${id}`,
-        LOCK: (id: string) => `/api/v1/admin/users/${id}/lock`,
-        UNLOCK: (id: string) => `/api/v1/admin/users/${id}/unlock`,
-        DELETE: (id: string) => `/api/v1/admin/users/${id}`,
+        LIST: '/api/v1/users/',
+        DETAIL: (id: string) => `/api/v1/users/${id}`,
+        LOCK: (id: string) => `/api/v1/users/${id}/lock`,
+        UNLOCK: (id: string) => `/api/v1/users/${id}/unlock`,
+        DELETE: (id: string) => `/api/v1/users/${id}`,
     },
 
     // Universities

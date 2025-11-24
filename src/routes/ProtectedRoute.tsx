@@ -11,7 +11,11 @@ export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { user, isLoading, isAdmin } = useAuth();
 
   if (isLoading) {
-    return <SpinnerCustom />;
+    return (
+      <div className='flex h-screen w-full justify-center items-center'>
+        <SpinnerCustom />;
+      </div>
+    )
   }
 
   if (!user) {

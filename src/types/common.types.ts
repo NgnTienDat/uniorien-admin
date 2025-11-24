@@ -4,14 +4,18 @@ export interface ApiResponse<T> {
   result: T;
 }
 
-export interface PaginatedResponse<T> {
-  code: number;
-  message: string;
-  result: T[];
-  totalPages: number;
+
+export interface PageResponse<T> {
+  content: T[];
+  pageNumber: number;
+  pageSize: number;
   totalElements: number;
-  currentPage: number;
+  totalPages: number;
+  first: boolean;
+  last: boolean;
+  empty: boolean;
 }
+
 
 export interface ApiError {
   code: number;
