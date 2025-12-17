@@ -3,6 +3,7 @@ import axios, { AxiosError, type AxiosRequestConfig } from 'axios';
 import { authService } from './services/auth.service';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+const AI_SERVICE_BASE_URL = import.meta.env.VITE_AI_SERVICE_BASE_URL || 'http://127.0.0.1:8000';
 
 // Create axios instance
 export const apiClient = axios.create({
@@ -10,6 +11,15 @@ export const apiClient = axios.create({
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
+  },
+});
+
+export const aiServiceClient = axios.create({
+  baseURL: AI_SERVICE_BASE_URL,
+  timeout: 60000,
+  headers: {
+    'Content-Type': 'application/json',
+    'x-admin-token': import.meta.env.VITE_ADMIN_INTERNAL_INGESTION_SECRET_KEY
   },
 });
 
