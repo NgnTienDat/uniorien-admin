@@ -7,6 +7,7 @@ import { Login } from '@/pages/login/Login';
 import { AdminLayout } from '@/components/layout/AdminLayout';
 import { Dashboard } from '@/pages/dashboard/Dashboard';
 import { UserList } from '@/pages/users/UserList';
+import { DataIngestion } from '@/components/features/chatbot_ingestion/DataIngestion';
 
 
 export const router = createBrowserRouter([
@@ -35,6 +36,12 @@ export const router = createBrowserRouter([
                 children: [
                     { index: true, element: <UserList /> },
                     // { path: ':id', element: <UserDetail /> },
+                ],
+            },
+            {
+                path: 'chatbot-ingestion',
+                children: [
+                    { index: true, element: <DataIngestion /> },
                 ],
             },
             // {

@@ -4,6 +4,11 @@ export interface ApiResponse<T> {
   result: T;
 }
 
+export interface AIApiResponse<T> {
+  success: boolean;
+  message?: string;
+  data?: T;
+}
 
 export interface PageResponse<T> {
   content: T[];

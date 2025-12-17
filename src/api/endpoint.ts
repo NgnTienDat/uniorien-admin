@@ -72,4 +72,9 @@ export const API_ENDPOINTS = {
         UPDATE: (id: string) => `/api/v1/admin/major-groups/${id}`,
         DELETE: (id: string) => `/api/v1/admin/major-groups/${id}`,
     },
+
+    AI: {
+        INGEST_DATA: '/api/v1/ingest',
+        INGEST_STATUS: '/api/v1/ingest/status',
+    }
 };

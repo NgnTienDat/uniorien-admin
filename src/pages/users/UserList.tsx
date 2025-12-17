@@ -1,6 +1,4 @@
-// src/pages/users/UserList.tsx
 import { useState } from 'react';
-import { UserTable } from '@/components/features/users/UserTable';
 import { useUsers } from '@/hooks/useUser';
 import { Pagination2 } from '@/components/common/Pagination2';
 import { UserTable2 } from '@/components/features/users/UserTable2';

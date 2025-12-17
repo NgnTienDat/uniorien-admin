@@ -31,6 +31,7 @@ const menuItems: MenuItem[] = [
     { path: '/scraping', label: 'Data Scraping', icon: <Database size={20} /> },
     { path: '/majors', label: 'Majors', icon: <BookOpen size={20} /> },
     { path: '/major-groups', label: 'Major Groups', icon: <FolderTree size={20} /> },
+    { path: '/chatbot-ingestion', label: 'Chatbot Ingestion', icon: <Database size={20} /> },
 ];
 
 export const AdminLayout = () => {
